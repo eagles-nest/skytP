@@ -1,7 +1,7 @@
 <?php
 require_once 'conn.php';
-$email =$_POST['email'];
-$pass = $_POST['pass'];
+$email =validateInput($conn,$_POST['email']);
+$pass = validateInput($conn,$_POST['pass']);
 $pass=md5($pass);
 //function validateFormData($data) {
   if(empty($email) || empty($pass)){

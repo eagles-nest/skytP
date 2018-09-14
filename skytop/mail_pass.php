@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'conn.php';
-$email = $_POST['email'];
+$email = validateInput($conn,$_POST['email']);
 $query="select email from users where email='$email'";
 $result=mysqli_query($conn,$query) or die("problem with the query");
 if(mysqli_num_rows($result)>0){

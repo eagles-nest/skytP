@@ -6,6 +6,7 @@
 // $_GLOBALS['token']=$token;
 if(isset($_POST['submit'])){
   $token=empty($_POST["token"])? '':$_POST["token"];
+  $token=validateInput($conn,$token);
   //echo $token;
   $pass = empty($_POST['pass']) ?'':$_POST['pass'];
   $confirm = empty($_POST['confirm']) ? '':$_POST['confirm'];
@@ -16,6 +17,7 @@ if(isset($_POST['submit'])){
     echo "the passwords do not match";
   }
   elseif($pass == $confirm){
+      $pass=validateInput($conn,$pass);
       $pass=md5($pass);
       // select email address of user from the password_reset table
       $sql = "SELECT email FROM password_reset WHERE token='$token' LIMIT 1";
