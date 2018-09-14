@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+      <script src="js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <div class="container">
+    	  <div class="row">
+          <div class="col-sm-4"></div>
+
+          <div class="col-sm-4 login">
+            <form action="login.php" method="POST">
+              <label>Current Password</label>
+              <div class="form-group pass_show">
+                <input type="password" value="" class="form-control" placeholder="Current Password" name="current-p">
+              </div>
+              <label>New Password</label>
+              <div class="form-group pass_show">
+                <input type="password" value="" class="form-control" placeholder="New Password" name="new-p">
+              </div>
+              <label>Confirm Password</label>
+              <div class="form-group pass_show">
+                <input type="password" value="" class="form-control" placeholder="Confirm Password" name="confirm-p">
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Submit">
+              </div>
+            </form>
+
+          </div>
+
+          <div class="col-sm-4"></div>
+    	</div>
+    </div>
+
+  </body>
+</html>
